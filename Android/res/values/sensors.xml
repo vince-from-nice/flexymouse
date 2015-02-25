@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sensors_array">
+        <item>ACCELEROMETER</item>
+        <item>GAME_ROTATION_VECTOR</item>
+        <item>GEOMAGNETIC_ROTATION_VECTOR</item>
+        <item>GYROSCOPE</item>
+        <item>GRAVITY</item>
+        <item>LINEAR_ACCELERATION</item>
+        <item>MAGNETIC_FIELD</item>
+        <item>ORIENTATION_V1</item>
+        <item>ORIENTATION_V2</item>
+        <item>ROTATION_VECTOR</item>
+    </string-array>
+</resources>

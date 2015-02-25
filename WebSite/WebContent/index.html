@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>FlexyMouse</title>
+</head>
+<body style="width: 100%;">
+	<div style="width: 800px; text-align: left">
+		<h1>FlexyMouse</h1>
+
+		<h2>Introduction</h2>
+		<p>FlexyMouse let you use your phone (or tablet) as a wireless 3D controller.</p>
+		<p>The main idea is to use the sensor devices (such as the accelerometer or gyroscope) which are present on all descent
+			smartphones to detect rotation in 3D space.</p>
+		<p>Widgets such as buttons, sliders or even trackpads could add extra controls but the key feature is to detect 3D
+			rotation movements (ie. well kown as yaw, pitch, roll in aeronautics field).</p>
+		<p>The main use case is to use FlexyMouse as a controller in flight simulations (specially for helicopters simulation
+			where all the 3 rotation axes need to be perfectly controlled) but at the end it could be used in other simulations or even in any
+			games or software.</p>
+		<p>FlexyMouse will communicate with PC via Bluetooth, that way no special software will need to be installed on the target
+			PC.</p>
+
+		<table>
+			<tr>
+				<td style="vertical-align: top;">
+				    <h2>Android application</h2>
+					<h3>Requirements</h3>
+					<p>A smartphone or tablet with Android version 4.3 (API Level 18).</p>
+					<h3>Download</h3>
+					<p>
+						The application is not (yet) on the Google Play store so you have to download the following <a
+							href="FlexyMouseAndroid.apk">APK file</a> and install it manually on your Android device.
+					</p>
+					<p>
+						By default your Android device doesn't allow you to install APK files from unknown sources. To get rid of that you have to
+						go to the Security section in Android settings and activate the <i>Unknown sources</i> checkbox
+					</p>
+					<h3>Known issues</h3>
+					<ul>
+						<li>The GUI let you to choose various sensor mode but currently only the default one (ORIENTATION_V1) is really
+							functional.</li>
+						<li>The GUI let you activate Bluetooth but only Wifi (or even 3G/4G) connections to a listener are functional for now. That's
+							why so you really should install FlexyMouseListener, see below.</li>
+						<li>When you try connect to a listener the connection seems to be always successful even if no listener is listening [ALMOST FIXED]</li>
+					</ul>
+				</td>
+				<td><img src="screenshots/FlexyMouseAndroid.png" alt="Android screenshot" style="text-align: right;" /></td>
+			</tr>
+		</table>
+
+		<h2>iOS application</h2>
+
+		<p>Hmm not available (yet), sorry..</p>
+
+		<h2>Java listener</h2>
+		<p>That component is optional, It's small application developed in Java for testing purpose. It listens events from a
+			FlexyMouse device and rotate various 3D models.</p>
+		<p>
+			<a href="FlexyMouseListener.jnlp">Launch FlexyMouseListener with Java Web Start.</a>
+		</p>
+		<img src="screenshots/FlexyMouseListener.png" alt="Listener screenshot" style="text-align: right;" />
+		<h3>Requirements</h3>
+		<p>A PC with an installation of Java (6 or more)</p>
+		<h3>Known issues</h3>
+		<ul>
+			<li><b>Security issue : </b>Since the application is self-signed it should be blocked by your system so you have to
+				change your Java security settings. On Windows you have to go to Configuration Panel, click on the Java icon and then on the
+				Security tab and change the security level to <i>Medium</i>. But since that level has been removed on latest Java release
+				(there's only <i>High</i> or <i>Very high</i> in Java 8, no more <i>Medium</i>), you may have to add an exception for the
+				website <i>www.onlacherien.org</i> in order to be able to launch the application</li>
+			<li><b>Bug in Java 7 : </b>There's a known bug in Java 7 (between update 25 and update 65) on Windows with AWT and Java Web Start.
+				So if it's your case you should upgrade to the latest release of Java 7, or use Java 8.</li>
+		</ul>
+	</div>
+</body>
+</html>

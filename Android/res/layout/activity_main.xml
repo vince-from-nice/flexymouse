@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <!--
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    Widgets
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/holo_green_light"
+        android:gravity="center_horizontal"
+        android:text="@string/Widgets"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_weight="1"
+            android:onClick="onWidgetButtonClick"
+            android:text="@string/Button1" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:onClick="onWidgetButtonClick"
+            android:text="@string/Button2" />
+    </LinearLayout>
+
+    <!--
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    Raw data
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/holo_green_light"
+        android:gravity="center_horizontal"
+        android:text="@string/RawData"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <!-- Yaw rotation -->
+
+        <TextView
+            android:id="@+id/textViewLabelForX"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@string/Yaw" />
+
+        <TextView
+            android:id="@+id/textViewRawX"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="#0000FF" />
+
+        <ProgressBar
+            android:id="@+id/progressBarRawX"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <!-- Pitch rotation -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textViewLabelForY"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@string/Pitch" />
+
+        <TextView
+            android:id="@+id/textViewRawY"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="#0000FF" />
+
+        <ProgressBar
+            android:id="@+id/progressBarRawY"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <!-- Roll rotation -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textViewLabelForZ"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@string/Roll" />
+
+        <TextView
+            android:id="@+id/textViewRawZ"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="#0000FF" />
+
+        <ProgressBar
+            android:id="@+id/progressBarRawZ"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- Final data -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/holo_green_light"
+        android:gravity="center_horizontal"
+        android:text="@string/FinalData"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <!-- Yaw rotation -->
+
+        <TextView
+            android:id="@+id/textViewLabelForFinalX"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@string/Yaw" />
+
+        <TextView
+            android:id="@+id/textViewComputedX"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="#0000FF" />
+
+        <ProgressBar
+            android:id="@+id/progressBarComputedX"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <!-- Pitch rotation -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textViewLabelForFinalY"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@string/Pitch" />
+
+        <TextView
+            android:id="@+id/textViewComputedY"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="#0000FF" />
+
+        <ProgressBar
+            android:id="@+id/progressBarComputedY"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <!-- Roll rotation -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textViewLabelForFinalZ"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@string/Roll" />
+
+        <TextView
+            android:id="@+id/textViewComputedZ"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="#0000FF" />
+
+        <ProgressBar
+            android:id="@+id/progressBarComputedZ"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <!--
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    Options
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/holo_green_light"
+        android:gravity="center_horizontal"
+        android:text="@string/Options"
+        android:textSize="20sp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alignmentMode="alignMargins"
+        android:columnCount="3"
+        android:columnOrderPreserved="false"
+        android:useDefaultMargins="true" >
+
+        <CheckBox
+            android:id="@+id/checkboxUseOrigin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:checked="true"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/UseOrigin" />
+
+        <Button
+            android:id="@+id/buttonRecenterView"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_rowSpan="2"
+            android:onClick="onRecenterButtonClick"
+            android:text="@string/RecenterView" />
+
+        <TextView
+            android:id="@+id/textViewCurrentOriginLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/CurrentOrigin" />
+
+        <TextView
+            android:id="@+id/textViewCurrentOrigin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="#0000FF" />
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/SelectSensorMode" />
+
+        <Spinner
+            android:id="@+id/spinnerSensorMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!--
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    Network
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/holo_green_light"
+        android:gravity="center_horizontal"
+        android:text="@string/Network"
+        android:textSize="20sp" />
+
+    <!--  //////////////////////////// Bluetooth //////////////////////////////////// -->
+    
+    <LinearLayout
+        android:id="@+id/viewsForBluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:text="@string/Bluetooth"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/checkboxActivateBluetooth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:checked="false"
+                android:onClick="onCheckboxClicked"
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/viewsForBluetoothEnabled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/buttonBluetoothListPairedDevices"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onBluetoothButtonClick"
+                    android:text="@string/ListPairedDevices" />
+
+                <Button
+                    android:id="@+id/buttonBluetoothBeDiscoverable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onBluetoothButtonClick"
+                    android:text="@string/BeDiscoverable" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listViewBluetoothPairedDevices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!--  //////////////////////////// UDP connected  //////////////////////////////////// -->
+    
+    <LinearLayout
+        android:id="@+id/viewsForUdpConnected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="@string/UDP"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewUdpConnectionState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="@string/ListenerNotConnected"
+            android:textColor="#FF0000" />
+
+        <Button
+            android:id="@+id/buttonUdpDisconnect"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:onClick="onUdpButtonClick"
+            android:text="@string/Disconnect" />
+    </LinearLayout>
+
+    <!--  ////////////////////////// UDP disconnected /////////////////////////////////// -->
+    
+    <LinearLayout
+        android:id="@+id/viewsForUdpNotConnected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="@string/UDP"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="@string/EnterListenerAddress" />
+
+        <EditText
+            android:id="@+id/editTextListenerAddress"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ems="10"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="@string/DefaultAddress" >
+        </EditText>
+
+        <Button
+            android:id="@+id/buttonUdpConnect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onUdpButtonClick"
+            android:text="@string/Connect" />
+    </LinearLayout>
+
+    <!--
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    Sensors infos
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    <TextView
+        android:id="@+id/sensorsInfosTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="4"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/SensorInfos"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="4"
+        android:layout_gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/sensorsInfos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ems="10" />
+    </ScrollView>
+    -->
+
+</LinearLayout>

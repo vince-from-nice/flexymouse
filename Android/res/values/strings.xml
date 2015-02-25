@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FlexyMouse</string>
+    <string name="action_settings">Settings</string>
+    <string name="Start">Start</string>
+    <string name="Stop">Stop</string>
+    <string name="Widgets">Widgets</string>
+    <string name="Button1">Button1</string>
+    <string name="Button2">Button2</string>
+    <string name="Rotation">Rotation</string>
+    <string name="RawData">Raw data</string>
+    <string name="FinalData">Final data</string>
+    <string name="Yaw">Yaw :</string>
+    <string name="Pitch">Pitch :</string>
+    <string name="Roll">Roll :</string>
+    <string name="Options">Options</string>
+    <string name="UseOrigin">Use origin ?</string>
+    <string name="CurrentOrigin">Current origin :</string>
+    <string name="RecenterView">Reset origin\n(ie. recenter view)</string>
+    <string name="SensorInfos">Informations about detected sensors :</string>
+    <string name="Network">Networking</string>
+    <string name="UDP">Wifi:    </string>
+    <string name="Bluetooth">Bluetooth: </string>
+    <string name="ActivateBluetooth">Activate ?</string>
+    <string name="ListPairedDevices">Paired devices</string>
+    <string name="BeDiscoverable">Discoverable?</string>
+    <string name="Discover">Discover</string>
+    <string name="Connect">Connect</string>
+    <string name="Disconnect">Disconnect</string>
+    <string name="ListenerNotConnected">You are currently not connected</string>
+    <string name="EnterListenerAddress">Listener : </string>
+    <string name="DefaultAddress">192.168.1.17</string>
+    <string name="SelectSensorMode">Select sensor mode : </string>
+
+</resources>

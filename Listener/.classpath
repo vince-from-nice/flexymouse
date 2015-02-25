@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="res"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="lib/java3d-1.5.2/j3dcore.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="FlexyMouseListener/lib/java3d-1.5.2/linux-64bits"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/java3d-1.5.2/j3dutils.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="FlexyMouseListener/lib/java3d-1.5.2"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/java3d-1.5.2/vecmath.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

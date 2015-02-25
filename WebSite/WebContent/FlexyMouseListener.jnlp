@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+" codebase="http://www.onlacherien.org/mouse" href="FlexyMouseListener.jnlp">
+
+	<information>
+		<title>FlexyMouseListener</title>
+		<vendor>Vinz</vendor>
+		<homepage href="http://www.onlacherien.org/mouse" />
+		<description>Java listener for FlexyMouse</description>
+		<description kind="short">Java listener for FlexyMouse</description>
+		<offline-allowed />
+	</information>
+
+	<security>
+		<all-permissions />
+	</security>
+
+	<resources>
+		<j2se version="1.6+" />
+		<jar href="FlexyMouseListener.jar" />
+		<!--extension href="http://download.java.net/media/java3d/webstart/release/java3d-latest.jnlp"/ -->
+		<jar href="java3d-1.5.2/j3dcore.jar" download="eager" />
+		<jar href="java3d-1.5.2/j3dutils.jar" download="eager" />
+		<jar href="java3d-1.5.2/vecmath.jar" download="eager" />
+	</resources>
+
+	<resources os="Windows" arch="x86">
+		<nativelib href="java3d-1.5.2/windows-32bits/j3dcore-ogl-chk_dll.jar" download="eager" />
+		<nativelib href="java3d-1.5.2/windows-32bits/j3dcore-ogl_dll.jar" download="eager" />
+		<nativelib href="java3d-1.5.2/windows-32bits/j3dcore-d3d_dll.jar" download="eager" />
+	</resources>
+
+	<resources os="Windows" arch="amd64">
+		<nativelib href="java3d-1.5.2/windows-64bits/j3dcore-ogl_dll.jar" download="eager" />
+	</resources>
+
+	<resources os="Linux" arch="i386">
+		<nativelib href="java3d-1.5.2/1.5.2/linux-32bits/lib_j3dcore-ogl_so.jar" download="eager" />
+	</resources>
+
+	<resources os="Linux" arch="x86">
+		<nativelib href="java3d-1.5.2/linux-32bits/lib_j3dcore-ogl_so.jar" download="eager" />
+	</resources>
+
+	<resources os="Linux" arch="amd64">
+		<nativelib href="java3d-1.5.2/linux-64bits/lib_j3dcore-ogl_so.jar" download="eager" />
+	</resources>
+
+	<resources os="Linux" arch="x86_64">
+		<nativelib href="java3d-1.5.2/linux-64bits/lib_j3dcore-ogl_so.jar" download="eager" />
+	</resources>
+
+	<resources os="Mac OS X">
+		<property name="j3d.rend" value="jogl" />
+		<!--extension name="jogl" href="http://download.java.net/media/jogl/builds/archive/jsr-231-webstart-current/jogl.jnlp" /-->
+		<nativelib href="java3d-1.5.2/osx-universal/jogl.jar" download="eager" />
+		<nativelib href="java3d-1.5.2/osx-universal/jogl-natives-macosx-universal.jar" download="eager" />
+		<nativelib href="java3d-1.5.2/osx-universal/gluegen-rt-natives-macosx-universal.jar" download="eager" />
+	</resources>
+
+	<application-desc main-class="org.flexymouse.listener.Application" />
+
+</jnlp>
